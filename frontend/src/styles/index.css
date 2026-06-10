@@ -1,0 +1,117 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ruta-blue-900: #0a1628;
+  --color-ruta-blue-800: #0f2744;
+  --color-ruta-blue-700: #1e4a8a;
+  --color-ruta-blue-600: #2563eb;
+  --color-ruta-blue-500: #1d6fd4;
+  --color-ruta-blue-400: #3b82f6;
+  --color-ruta-orange-500: #f97316;
+  --color-ruta-orange-400: #fb923c;
+  --color-ruta-silver-400: #94a3b8;
+  --color-ruta-silver-300: #cbd5e1;
+  --color-ruta-silver-200: #e2e8f0;
+  --color-ruta-surface: #f8fafc;
+  --color-ruta-ink: #0f172a;
+  --color-ruta-muted: #64748b;
+  --color-danger-500: #ef4444;
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Syne', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-ruta-surface text-ruta-ink font-sans antialiased;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-20px) translateX(10px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .mesh-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(37, 99, 235, 0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 50% at 80% 80%, rgba(249, 115, 22, 0.12) 0%, transparent 55%),
+      radial-gradient(ellipse 100% 80% at 50% 100%, rgba(10, 22, 40, 0.06) 0%, transparent 70%),
+      linear-gradient(160deg, #f8fafc 0%, #eef4ff 40%, #f8fafc 100%);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(203, 213, 225, 0.8);
+    box-shadow:
+      0 10px 40px rgba(37, 99, 235, 0.18),
+      0 4px 12px rgba(15, 23, 42, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  }
+
+  .btn-primary-ruta {
+    background-image:
+      linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 60%
+      ),
+      linear-gradient(to right, #1d6fd4, #2563eb);
+    background-size: 200% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+  }
+
+  .btn-primary-ruta:hover:not(:disabled) {
+    animation: shimmer 1.4s ease infinite;
+    background-image:
+      linear-gradient(
+        105deg,
+        transparent 40%,
+        rgba(255, 255, 255, 0.35) 50%,
+        transparent 60%
+      ),
+      linear-gradient(to right, #2563eb, #3b82f6);
+  }
+
+  .orb-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .orb-float-delayed {
+    animation: float 10s ease-in-out 2s infinite;
+  }
+
+  .swoosh-watermark {
+    opacity: 0.06;
+    pointer-events: none;
+  }
+}

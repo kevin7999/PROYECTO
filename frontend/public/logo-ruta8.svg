@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" fill="none" role="img" aria-label="RUTA 8 AUTOPARTES">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e4a8a"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f1f5f9"/>
+      <stop offset="100%" stop-color="#94a3b8"/>
+    </linearGradient>
+  </defs>
+  <path d="M310 8 C380 8 400 60 360 100 C320 118 280 100 270 70" stroke="url(#silverGrad)" stroke-width="3" fill="none" opacity="0.5"/>
+  <text x="8" y="58" font-family="Arial Black, sans-serif" font-size="52" font-weight="900" font-style="italic" fill="url(#blueGrad)">RUTA</text>
+  <text x="8" y="88" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3" fill="url(#silverGrad)">AUTOPARTES</text>
+  <text x="300" y="78" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="url(#orangeGrad)">8</text>
+</svg>
